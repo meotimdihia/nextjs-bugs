@@ -25,5 +25,6 @@ export async function getStaticPaths() {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {},
+    revalidate: 3000,
   };
 };
