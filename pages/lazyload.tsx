@@ -22,7 +22,7 @@ export default function App() {
 }
 
 function Example() {
-  const myLoader = ({ src, width }) => {
+  const myLoader = ({ src, width }: { src: string; width: string }) => {
     return `https://picsum.photos/id/${src}/${width}/${width}`;
   };
 
@@ -60,7 +60,7 @@ function Example() {
         <>
           {data.pages?.map((page, i) => (
             <React.Fragment key={i}>
-              {page.photos.map((photo) => (
+              {page.photos.map((photo: any) => (
                 <div style={{ padding: 10 }} key={photo.id}>
                   <img
                     alt={"test"}
